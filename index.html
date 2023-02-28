@@ -142,38 +142,73 @@
             <h2 class="titulo-seccion">Contacto</h2>
             <div class="fila">
                 
-                <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
+                <form action="" class="formulario" id="formulario">
+                    <div class="col">
 
+                        <div class="formulario__grupo" id="grupo__nombre">
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Tú Nombre">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El Nombre tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__telefono">
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Número telefónico">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                        </div>
+                      
+                        <div class="formulario__grupo" id="grupo__correo">
+                            <div class="formulario__grupo-input">
+                                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="Dirección de correo">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__tema">
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input" name="tema" id="tema" placeholder="Tema">
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__mensaje">
+                            <div class="formulario__grupo-input">
+                                <textarea class="formulario__input" name="mensaje" id="mensaje" cols="10" rows="4" placeholder="Mensaje"></textarea>
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                        </div>
+
+                        <div class="formulario__grupo formulario__grupo-btn-enviar">
+                            <button type="submit" class="formulario__btn">Enviar Mensaje<i class="fa-solid fa-paper-plane"></i></button>
+                            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                        </div>
+                    </div>    
+                </form>
                 
-                <div class="col">
-                    <img src="img/ubicacion.png" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                2304 Dane St
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                (481) 576-3083
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                rene.murray@example.com
-                            </li>
-                        </ul>
+
+                <div class="mapa">
+                    <div class="col">
+                        <img src="img/ubicacion.png" alt="">
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    2304 Dane St
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    (481) 576-3083
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -192,5 +227,6 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/formulario.js"></script>
 </body>
 </html>

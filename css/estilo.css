@@ -312,12 +312,12 @@ html{
 .contacto .fila{
     display: flex;
 }
-.contacto .col{
+.contacto .formulario, .mapa{
     width: 50%;
     padding: 10px;
     position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+.contacto .formulario .col input, .contacto .col textarea{
     display: block;
     width: 100%;
     padding: 18px;
@@ -327,7 +327,7 @@ html{
     color: #fff;
     font-size: 18px;
 }
-.contacto button{
+.contacto .formulario  button{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -340,23 +340,65 @@ html{
     position: relative;
     z-index: 10;
 }
-.contacto button .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #410294;
-    z-index: -1;
-    transition: 1s;
+
+
+.formulario__grupo-input {
+	position: relative;
 }
-.contacto button:hover .overlay{
+
+.formulario__input-error {
+	font-size: 14px;
+	margin-bottom: 5px;
+    margin-top: 0px;
+	display: none;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+.contacto .mapa .col img{
     width: 100%;
 }
-.contacto .col img{
-    width: 100%;
-}
-.contacto .col .info{
+.contacto .mapa .col .info{
     position: absolute;
     top: 40%;
     background-color: #252A2E;
@@ -365,17 +407,18 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.contacto .col .info ul{
+.contacto .mapa .col .info ul{
     list-style: none;
 }
-.contacto .col .info ul li{
-    margin-bottom: 20px;
+.contacto .mapa .col .info ul li{
+    margin-bottom: 5px;
 }
-.contacto .col .info ul li i{
+.contacto .mapa .col .info ul li i{
     color: #410294;
     display: inline-block;
     margin-right: 20px;
 }
+
 
 footer{
     background-color: #252A2E;
@@ -450,7 +493,7 @@ footer .arriba{
     .contacto .fila{
         display: block;
     }
-    .contacto .fila .col{
+    .contacto .fila .formulario , .mapa{
         width: 100%;
     }
 }
